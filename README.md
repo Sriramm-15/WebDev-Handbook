@@ -185,14 +185,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special appreciation to MDN contributors for maintaining excellent documentation
 - Inspired by the need for a comprehensive, beginner-friendly web development resource
 
-## 📞 Contact
-
-If you have questions, suggestions, or just want to say hi:
-
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/web-development-handbook/issues)
-- **Email**: your.email@example.com
-- **Twitter**: [@yourusername](https://twitter.com/yourusername)
-
 ---
 
 ⭐ **If this handbook helped you learn web development, please give it a star!** ⭐
