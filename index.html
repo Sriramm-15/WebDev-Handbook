@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Handbook - Learn HTML, CSS & JavaScript</title>
+    <meta name="description" content="Comprehensive beginner's guide to web development. Learn HTML, CSS, JavaScript, and Web APIs with interactive examples and practical tips.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Web Dev Handbook</h1>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-btn">🌙</button>
+                <button id="mobile-menu" class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <h2>Contents</h2>
+            <ul class="nav-list">
+                <li>
+                    <button class="nav-btn active" data-section="html">
+                        <span class="nav-icon">🏗️</span>
+                        HTML
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn" data-section="css">
+                        <span class="nav-icon">🎨</span>
+                        CSS
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn" data-section="javascript">
+                        <span class="nav-icon">⚡</span>
+                        JavaScript
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-btn" data-section="webapis">
+                        <span class="nav-icon">🔌</span>
+                        Web APIs
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">
+                    Web Development
+                    <span class="hero-subtitle">Handbook</span>
+                </h1>
+                <p class="hero-description">
+                    Your comprehensive guide to mastering HTML, CSS, and JavaScript. 
+                    From fundamentals to advanced concepts, everything you need to become a web developer.
+                </p>
+            </section>
+
+            <!-- Feature Cards -->
+            <div class="feature-cards">
+                <div class="feature-card" data-section="html">
+                    <div class="feature-icon html-gradient">🏗️</div>
+                    <h3>HTML</h3>
+                    <p>Structure & Semantics</p>
+                </div>
+                <div class="feature-card" data-section="css">
+                    <div class="feature-icon css-gradient">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Styling & Layout</p>
+                </div>
+                <div class="feature-card" data-section="javascript">
+                    <div class="feature-icon js-gradient">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Interactivity & Logic</p>
+                </div>
+                <div class="feature-card" data-section="webapis">
+                    <div class="feature-icon api-gradient">🔌</div>
+                    <h3>Web APIs</h3>
+                    <p>Browser APIs & Integration</p>
+                </div>
+            </div>
+
+            <!-- HTML Section -->
+            <section id="html-section" class="content-section active">
+                <div class="section-header html-gradient">
+                    <div class="section-icon">🏗️</div>
+                    <div>
+                        <h2>HTML</h2>
+                        <p>HyperText Markup Language - The structure of the web</p>
+                    </div>
+                </div>
+
+                <div class="topics">
+                    <div class="topic-card">
+                        <h3>HTML Fundamentals</h3>
+                        <p>Learn the basic structure and syntax of HTML documents.</p>
+                        
+                        <div class="example">
+                            <h4>Basic HTML Document Structure</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> This shows the basic structure every HTML document should have, including DOCTYPE, html, head, and body elements.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Always include the DOCTYPE declaration</li>
+                                <li>Use semantic HTML elements for better accessibility</li>
+                                <li>Include meta tags for proper character encoding and viewport</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Common HTML Elements</h3>
+                        <p>Master the most frequently used HTML elements and their purposes.</p>
+                        
+                        <div class="example">
+                            <h4>Essential HTML Elements</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold text&lt;/strong&gt; and &lt;em&gt;italic text&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;First list item&lt;/li&gt;
+    &lt;li&gt;Second list item&lt;/li&gt;
+    &lt;li&gt;Third list item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href="https://example.com"&gt;Visit Example.com&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="Description of image"&gt;
+
+&lt;div class="container"&gt;
+    &lt;span&gt;Inline element&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> These are the most commonly used HTML elements for structuring content on web pages.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use headings (h1-h6) to create a proper document outline</li>
+                                <li>Always include alt attributes for images</li>
+                                <li>Use strong and em for semantic emphasis, not just styling</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>HTML Forms</h3>
+                        <p>Create interactive forms to collect user input.</p>
+                        
+                        <div class="example">
+                            <h4>Complete Form Example</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>&lt;form action="/submit" method="POST"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Information&lt;/legend&gt;
+        
+        &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        
+        &lt;label for="phone"&gt;Phone:&lt;/label&gt;
+        &lt;input type="tel" id="phone" name="phone"&gt;
+        
+        &lt;label for="country"&gt;Country:&lt;/label&gt;
+        &lt;select id="country" name="country"&gt;
+            &lt;option value=""&gt;Select a country&lt;/option&gt;
+            &lt;option value="us"&gt;United States&lt;/option&gt;
+            &lt;option value="ca"&gt;Canada&lt;/option&gt;
+            &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+    &lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> This form demonstrates various input types, proper labeling, fieldsets for grouping, and form validation attributes.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Always associate labels with form controls using the "for" attribute</li>
+                                <li>Use appropriate input types for better user experience and validation</li>
+                                <li>Group related form elements using fieldset and legend</li>
+                                <li>Include proper form validation attributes like required, pattern, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Semantic HTML</h3>
+                        <p>Use meaningful HTML elements that describe the content structure.</p>
+                        
+                        <div class="example">
+                            <h4>Semantic HTML Layout</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Article Title&lt;/h1&gt;
+            &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+        &lt;/header&gt;
+        
+        &lt;section&gt;
+            &lt;h2&gt;Introduction&lt;/h2&gt;
+            &lt;p&gt;This is the introduction section of the article.&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;figure&gt;
+            &lt;img src="chart.png" alt="Sales data chart"&gt;
+            &lt;figcaption&gt;Sales data for Q1 2024&lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/article&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Related Articles&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/article1"&gt;Related Article 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/article2"&gt;Related Article 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2024 My Website. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> Semantic HTML uses elements that clearly describe their meaning and purpose, making content more accessible and SEO-friendly.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use header, nav, main, article, section, aside, and footer for page structure</li>
+                                <li>Use time element for dates and times with datetime attribute</li>
+                                <li>Use figure and figcaption for images with captions</li>
+                                <li>Use address element for contact information</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CSS Section -->
+            <section id="css-section" class="content-section">
+                <div class="section-header css-gradient">
+                    <div class="section-icon">🎨</div>
+                    <div>
+                        <h2>CSS</h2>
+                        <p>Cascading Style Sheets - Styling and layout for the web</p>
+                    </div>
+                </div>
+
+                <div class="topics">
+                    <div class="topic-card">
+                        <h3>CSS Fundamentals</h3>
+                        <p>Learn CSS syntax, selectors, and how to apply styles to HTML elements.</p>
+                        
+                        <div class="example">
+                            <h4>CSS Syntax and Selectors</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>/* Element Selector */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* ID Selector */
+#header {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Descendant Selector */
+.container p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Pseudo-classes */
+a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Pseudo-elements */
+p::first-line {
+    font-weight: bold;
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> CSS uses selectors to target HTML elements and apply styling rules. Different selector types offer various ways to target elements.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use classes for reusable styles and IDs for unique elements</li>
+                                <li>Understand CSS specificity: inline > IDs > classes > elements</li>
+                                <li>Use meaningful class names that describe purpose, not appearance</li>
+                                <li>Group related CSS rules together for better organization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>CSS Flexbox</h3>
+                        <p>Create flexible layouts with the Flexible Box Layout module.</p>
+                        
+                        <div class="example">
+                            <h4>Flexbox Layout</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>.flex-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Justify Content (main axis) */
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Align Items (cross axis) */
+.align-center {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Flex Items */
+.flex-grow {
+    flex-grow: 1; /* Takes up remaining space */
+}
+
+/* Responsive Flex Layout */
+.responsive-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.responsive-flex > * {
+    flex: 1 1 300px; /* Minimum 300px width */
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> Flexbox provides powerful tools for creating flexible, responsive layouts with easy alignment and distribution of space.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use justify-content for main axis alignment and align-items for cross axis</li>
+                                <li>flex-wrap allows items to wrap to new lines when needed</li>
+                                <li>The flex shorthand combines flex-grow, flex-shrink, and flex-basis</li>
+                                <li>Use gap property for consistent spacing between flex items</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>CSS Grid</h3>
+                        <p>Create complex two-dimensional layouts with CSS Grid.</p>
+                        
+                        <div class="example">
+                            <h4>CSS Grid Layout</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>/* Basic Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+/* Grid Template Areas */
+.grid-areas {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 150px;
+    grid-template-rows: 60px 1fr 40px;
+    gap: 1rem;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.aside { grid-area: aside; }
+.footer { grid-area: footer; }
+
+/* Responsive Grid */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> CSS Grid provides a powerful two-dimensional layout system with precise control over rows and columns.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use grid-template-areas for intuitive layout definition</li>
+                                <li>fr units represent fractions of available space</li>
+                                <li>auto-fit and auto-fill create responsive grid layouts</li>
+                                <li>Grid items can overlap and be positioned precisely</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Responsive Design</h3>
+                        <p>Create layouts that work on all device sizes using media queries and flexible units.</p>
+                        
+                        <div class="example">
+                            <h4>Responsive CSS Techniques</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>/* Mobile-First Approach */
+.container {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Flexible Units */
+.responsive-text {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1.5;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 2rem;
+    }
+    
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Responsive Images */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> Responsive design ensures your website looks great on all devices by using flexible layouts, media queries, and scalable units.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Start with mobile-first design and progressively enhance for larger screens</li>
+                                <li>Use relative units (rem, em, %, vw, vh) instead of fixed pixels</li>
+                                <li>Test your designs on various screen sizes and devices</li>
+                                <li>Use clamp() for fluid typography and spacing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JavaScript Section -->
+            <section id="javascript-section" class="content-section">
+                <div class="section-header js-gradient">
+                    <div class="section-icon">⚡</div>
+                    <div>
+                        <h2>JavaScript</h2>
+                        <p>The programming language of the web - Add interactivity and logic</p>
+                    </div>
+                </div>
+
+                <div class="topics">
+                    <div class="topic-card">
+                        <h3>JavaScript Fundamentals</h3>
+                        <p>Learn JavaScript syntax, variables, data types, and basic operations.</p>
+                        
+                        <div class="example">
+                            <h4>JavaScript Basics</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Variables and Data Types
+let name = "John Doe";           // String
+const age = 25;                  // Number
+let isStudent = true;            // Boolean
+let hobbies = ["reading", "coding", "gaming"]; // Array
+let person = {                   // Object
+    firstName: "John",
+    lastName: "Doe",
+    age: 25
+};
+
+// Template Literals
+let greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+console.log(greeting);
+
+// Functions
+function calculateArea(length, width) {
+    return length * width;
+}
+
+// Arrow Functions
+const calculatePerimeter = (length, width) => {
+    return 2 * (length + width);
+};
+
+// Shorter arrow function
+const square = x => x * x;
+
+// Array Methods
+let numbers = [1, 2, 3, 4, 5];
+let doubled = numbers.map(num => num * 2);
+let evens = numbers.filter(num => num % 2 === 0);
+let sum = numbers.reduce((acc, num) => acc + num, 0);
+
+console.log("Doubled:", doubled);
+console.log("Evens:", evens);
+console.log("Sum:", sum);</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> This covers the fundamental concepts of JavaScript including variables, functions, control structures, and basic array operations.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use const for values that won't change, let for variables that will</li>
+                                <li>Prefer arrow functions for short, simple functions</li>
+                                <li>Use template literals for string interpolation</li>
+                                <li>Learn array methods like map, filter, and reduce - they're very powerful</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>DOM Manipulation</h3>
+                        <p>Learn how to interact with HTML elements using JavaScript.</p>
+                        
+                        <div class="example">
+                            <h4>DOM Manipulation</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Selecting Elements
+const title = document.getElementById('title');
+const buttons = document.querySelectorAll('.btn');
+const firstParagraph = document.querySelector('p');
+
+// Creating Elements
+const newDiv = document.createElement('div');
+newDiv.className = 'container';
+newDiv.textContent = 'This is a new div';
+
+// Modifying Elements
+title.textContent = 'New Title';
+title.style.color = 'blue';
+title.style.fontSize = '2rem';
+
+// Adding/Removing Classes
+title.classList.add('highlight');
+title.classList.remove('old-style');
+title.classList.toggle('active');
+
+// Event Listeners
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
+// Form Handling
+const form = document.getElementById('myForm');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    console.log('Form data:', Object.fromEntries(formData));
+});
+
+// Dynamic Content Creation
+function createUserCard(user) {
+    const card = document.createElement('div');
+    card.className = 'user-card';
+    card.innerHTML = `
+        <h3>${user.name}</h3>
+        <p>Email: ${user.email}</p>
+        <button onclick="deleteUser(${user.id})">Delete</button>
+    `;
+    return card;
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> DOM manipulation allows you to dynamically change HTML content, styles, and structure using JavaScript.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use querySelector and querySelectorAll for flexible element selection</li>
+                                <li>Always check if elements exist before manipulating them</li>
+                                <li>Use event delegation for dynamically created elements</li>
+                                <li>Prefer textContent over innerHTML for security when adding plain text</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Asynchronous JavaScript</h3>
+                        <p>Handle asynchronous operations with promises and async/await.</p>
+                        
+                        <div class="example">
+                            <h4>Async JavaScript with Fetch</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Fetch API with Promises
+fetch('https://jsonplaceholder.typicode.com/users/1')
+    .then(response => response.json())
+    .then(user => {
+        console.log('User:', user);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+// Async/Await
+async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const user = await response.json();
+        console.log('User data:', user);
+        return user;
+    } catch (error) {
+        console.error('Failed to fetch user:', error.message);
+        throw error;
+    }
+}
+
+// Using async function
+fetchUserData(1);
+
+// Multiple async operations
+async function fetchMultipleUsers() {
+    try {
+        const [user1, user2, user3] = await Promise.all([
+            fetch('https://jsonplaceholder.typicode.com/users/1').then(r => r.json()),
+            fetch('https://jsonplaceholder.typicode.com/users/2').then(r => r.json()),
+            fetch('https://jsonplaceholder.typicode.com/users/3').then(r => r.json())
+        ]);
+        
+        console.log('All users:', { user1, user2, user3 });
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> Asynchronous JavaScript allows you to handle operations that take time without blocking the main thread, essential for web applications.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Use async/await for cleaner, more readable asynchronous code</li>
+                                <li>Always handle errors in async operations with try/catch</li>
+                                <li>Use Promise.all() for concurrent operations that don't depend on each other</li>
+                                <li>Remember that async functions always return a Promise</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>Interactive Demo</h3>
+                        <p>Try out JavaScript with this interactive example:</p>
+                        
+                        <div class="demo-container">
+                            <button id="demo-btn" class="demo-button">Click Me!</button>
+                            <button id="change-color-btn" class="demo-button">Change Color</button>
+                            <button id="add-text-btn" class="demo-button">Add Text</button>
+                            <div id="demo-output" class="demo-output">
+                                <p>Output will appear here...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="example">
+                            <h4>Code for the Interactive Demo:</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Interactive Demo Code
+const demoBtn = document.getElementById('demo-btn');
+const changeColorBtn = document.getElementById('change-color-btn');
+const addTextBtn = document.getElementById('add-text-btn');
+const output = document.getElementById('demo-output');
+
+demoBtn.addEventListener('click', () => {
+    output.innerHTML = '<p style="color: #007bff;">Button was clicked! 🎉</p>';
+});
+
+changeColorBtn.addEventListener('click', () => {
+    const colors = ['#ff6b35', '#f7931e', '#667eea', '#764ba2'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    output.style.backgroundColor = randomColor;
+    output.innerHTML = '<p style="color: white;">Background color changed!</p>';
+});
+
+addTextBtn.addEventListener('click', () => {
+    const newP = document.createElement('p');
+    newP.textContent = 'New paragraph added at ' + new Date().toLocaleTimeString();
+    newP.style.color = '#28a745';
+    output.appendChild(newP);
+});</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Web APIs Section -->
+            <section id="webapis-section" class="content-section">
+                <div class="section-header api-gradient">
+                    <div class="section-icon">🔌</div>
+                    <div>
+                        <h2>Web APIs</h2>
+                        <p>Modern browser APIs for enhanced functionality</p>
+                    </div>
+                </div>
+
+                <div class="topics">
+                    <div class="topic-card">
+                        <h3>🌐 Fetch API</h3>
+                        <p>Modern way to make HTTP requests and handle responses.</p>
+                        
+                        <div class="example">
+                            <h4>Fetch API Examples</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Basic GET Request
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+
+// POST Request with Data
+fetch('https://api.example.com/users', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        name: 'John Doe',
+        email: 'john@example.com'
+    })
+})
+.then(response => response.json())
+.then(data => console.log('Success:', data));
+
+// Async/Await Syntax
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
+    }
+}</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> The Fetch API provides a modern way to make HTTP requests with better error handling and cleaner syntax than older methods.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Always handle errors with .catch() or try/catch</li>
+                                <li>Check response.ok before processing data</li>
+                                <li>Use appropriate HTTP methods (GET, POST, PUT, DELETE)</li>
+                                <li>Set proper headers for different content types</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>💾 Web Storage API</h3>
+                        <p>Store data locally in the user's browser.</p>
+                        
+                        <div class="example">
+                            <h4>Local Storage Examples</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// localStorage - Persistent Storage
+localStorage.setItem('username', 'JohnDoe');
+localStorage.setItem('settings', JSON.stringify({theme: 'dark'}));
+
+// Retrieve data
+const username = localStorage.getItem('username');
+const settings = JSON.parse(localStorage.getItem('settings'));
+
+// sessionStorage - Session Storage (cleared when tab closes)
+sessionStorage.setItem('tempData', 'temporary value');
+const tempData = sessionStorage.getItem('tempData');
+
+// Check if storage is available
+if (typeof(Storage) !== "undefined") {
+    // Storage supported
+    console.log('Storage is available');
+} else {
+    // No storage support
+    console.log('Storage not supported');
+}
+
+// Storage utility functions
+const storage = {
+    set(key, value) {
+        try {
+            localStorage.setItem(key, JSON.stringify(value));
+        } catch (error) {
+            console.error('Storage error:', error);
+        }
+    },
+    
+    get(key) {
+        try {
+            const item = localStorage.getItem(key);
+            return item ? JSON.parse(item) : null;
+        } catch (error) {
+            console.error('Storage error:', error);
+            return null;
+        }
+    }
+};</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> Web Storage API allows you to store data locally in the browser, with localStorage persisting between sessions and sessionStorage clearing when the tab closes.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>localStorage persists until manually cleared</li>
+                                <li>sessionStorage clears when tab closes</li>
+                                <li>Store only strings - use JSON.stringify/parse for objects</li>
+                                <li>Check storage availability before using</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>📍 Geolocation API</h3>
+                        <p>Access user's geographical location with permission.</p>
+                        
+                        <div class="example">
+                            <h4>Geolocation Examples</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Get Current Position
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            const accuracy = position.coords.accuracy;
+            
+            console.log(`Location: ${lat}, ${lon}`);
+            console.log(`Accuracy: ${accuracy} meters`);
+            
+            // Use the coordinates (e.g., show on map)
+            showOnMap(lat, lon);
+        },
+        function(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    console.error('User denied geolocation request');
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    console.error('Location information unavailable');
+                    break;
+                case error.TIMEOUT:
+                    console.error('Location request timeout');
+                    break;
+            }
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 60000
+        }
+    );
+} else {
+    console.log('Geolocation not supported');
+}
+
+// Watch Position Changes
+const watchId = navigator.geolocation.watchPosition(
+    function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        updateLocation(lat, lon);
+    },
+    function(error) {
+        console.error('Watch error:', error);
+    }
+);
+
+// Stop watching
+// navigator.geolocation.clearWatch(watchId);</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> The Geolocation API allows you to get the user's location with their permission, useful for location-based features.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Always check if geolocation is supported</li>
+                                <li>Handle permission denied gracefully</li>
+                                <li>Use options to control accuracy and timeout</li>
+                                <li>Clear watch when no longer needed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic-card">
+                        <h3>🔔 Notification API</h3>
+                        <p>Send browser notifications to engage users.</p>
+                        
+                        <div class="example">
+                            <h4>Notification Examples</h4>
+                            <div class="code-block">
+                                <button class="copy-btn" onclick="copyCode(this)">📋</button>
+                                <pre><code>// Request permission and show notification
+async function requestNotificationPermission() {
+    if ('Notification' in window) {
+        const permission = await Notification.requestPermission();
+        
+        if (permission === 'granted') {
+            showNotification('Welcome!', {
+                body: 'Notifications are now enabled',
+                icon: '/icon.png'
+            });
+        }
+    }
+}
+
+// Show notification function
+function showNotification(title, options = {}) {
+    if (Notification.permission !== 'granted') {
+        console.log('Notification permission not granted');
+        return;
+    }
+    
+    const notification = new Notification(title, {
+        body: options.body || '',
+        icon: options.icon || '/default-icon.png',
+        badge: options.badge || '/badge.png',
+        tag: options.tag || 'default',
+        requireInteraction: options.persistent || false,
+        data: options.data || {}
+    });
+    
+    // Handle notification click
+    notification.onclick = function(event) {
+        event.preventDefault();
+        window.focus(); // Focus the window
+        this.close(); // Close notification
+        
+        // Handle custom action
+        if (options.onClick) {
+            options.onClick(event);
+        }
+    };
+    
+    // Auto close after 5 seconds
+    setTimeout(() => notification.close(), 5000);
+    
+    return notification;
+}
+
+// Usage examples
+showNotification('New Message', {
+    body: 'You have received a new message',
+    icon: '/message-icon.png',
+    tag: 'message',
+    onClick: () => {
+        // Open messages page
+        window.location.href = '/messages';
+    }
+});</code></pre>
+                            </div>
+                            <div class="explanation">
+                                <strong>Explanation:</strong> The Notification API allows you to display system notifications to engage users even when they're not actively viewing your page.
+                            </div>
+                        </div>
+
+                        <div class="tips">
+                            <h4>💡 Pro Tips:</h4>
+                            <ul>
+                                <li>Always request permission before showing notifications</li>
+                                <li>Use meaningful titles and body text</li>
+                                <li>Provide click handlers for user interaction</li>
+                                <li>Don't spam users with too many notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
